@@ -82,7 +82,7 @@ void write_product()
 
 void display_all() 
 {
-    //clrscr();
+    
     cout << "\n\n\n\t\tDISPLAY ALL RECORD !!!\n\n";
     fp.open("Shop.dat", ios:: in );
     while (fp.read((char * ) & pr, sizeof(product))) 
@@ -119,7 +119,7 @@ void display_sp(int n)
 void modify_product() 
 {
     long long unsigned int  no, found = 0;
-    //clrscr();
+   
     cout << "\n\n\tTo Modify ";
     cout << "\n\n\tPlease Enter The Product No. of The Product";
     cin >> no;
@@ -175,7 +175,7 @@ void delete_product()
 
 void menu() 
 {
-    //clrscr();
+  
     fp.open("Shop.dat", ios:: in );
     if (!fp) 
     {
@@ -220,7 +220,7 @@ void place_order()
     } while (ch == 'y' || ch == 'Y');
     cout << "\n\nThank You For Placing The Order";
     getch();
-    //clrscr();
+  
     cout << "\n\n******************************** INVOICE ************************\n";
    
    cout<<"Pr No.\tPr Name\tQuantity\tPrice\tAmount\tAmount after Discount ";
@@ -251,12 +251,10 @@ void place_order()
 
 void intro() 
 {
-    //clrscr();
+   
     gotoxy(31,11);
     cout << "***** SUPER MARKET BIILING *****";
-    //gotoxy(40, 40);
-    
-   // gotoxy(35, 17);
+   
    
     getch();
 
@@ -289,7 +287,7 @@ void admin_menu()
         break;
     case '3':
         int num;
-        //clrscr();
+       
         cout << "\n\n\tPlease Enter The Product No. ";
         cin >> num;
         display_sp(num);
